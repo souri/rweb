@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Hi!</title>
+    <link href="http://fonts.googleapis.com/css?family=Merriweather+Sans:300|Lato:300,400" rel="stylesheet" type="text/css">
+    <link href="/images/favicon.ico" type="image/x-icon" rel="icon">
+    <link rel="stylesheet" href="/css/standardize.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/js/sidr/stylesheets/jquery.sidr.light.css">
+    <script src="/js/ga.js"></script>
+    <script src="/js/jquery-min.js"></script>
+    <script src="/js/sidr/jquery.sidr.min.js"></script>
+    <script src="/js/jquery.touchwipe.js"></script>
+</head>
+
+<style>
+#mobile-header {
+  display: none;
+}
+.headshot2 {
+  display: none;
+}
+img {
+  width: 20%;
+  height: auto;
+  margin-left: 8px;
+  margin-top: 8px;
+}
+.sidr-class-hand {
+  cursor: pointer;
+  cursor: hand;
+}
+
+@media only screen and (max-width: 650px){
+  #mobile-header {
+    display: block;
+  }
+  .headshot2 {
+    display: block;
+  }
+  .body-1 {
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    top: 100px;
+  }
+}
+</style>
+
+<body class="body index clearfix">
+  <div id="mobile-header" class="clearfix hand text">
+    <a id="responsive-menu-button" href="#sidr-main">
+       <img class="menu" src="/images/menu.png" alt="Menu">
+    </a>
+  </div>
+    <div class="body body-1 clearfix">
+        <div class="bodytext clearfix">
+            <div class="body body-2">
+    <p>This page describes some of my recent work experiences. You can also view my formal <a href="/files/resume.pdf">resume</a>.</p>
+
+    <ul class="list">
+        <li>
+            <div class="list-img" style="background-image:url('/images/rzcode.png')"></div>
+            <div class="list-text">
+                <p>I'm currently working at <a href="http://raizlabs.com">Raizlabs</a>, a Boston mobile development firm. As a member of the web development team, I create cross-platorm experiences and APIs that drive awesome apps.</p>
+                <p>June 2014 &nbsp;•&nbsp; Present</p>
+            </div>
+        </li>
+
+        <li>
+            <div class="list-img" style="background-image:url('/images/wire.jpg')"></div>
+            <div class="list-text">
+                <p class="project-text">Over the summer of 2013, I worked at Atlantic Media on the development team behind <a href="http://theatlantic.com">TheAtlantic.com</a> and <a href="http://thewire.com">TheWire.com</a>. Using Django and PHP, I worked with a small, agile team of full-stack developers on projects including an interactive feature seen by 250,000 visitors.</p>
+                <p>June 2013 &nbsp;•&nbsp; August 2013</p>
+            </div>
+        </li>
+
+        <li>
+            <div class="list-img" style="background-image:url('/images/orient.png')"></div>
+            <div class="list-text">
+                <p class="project-text">Starting in the spring of 2013, I became the web developer for <a href="http://bowdoinorient.com">The Bowdoin Orient</a>, inheriting a large PHP code base that encompassed both the site's front-end and the newsroom CMS for editors. During my time at the Orient, I've been behind such changes as implementing version control and automated backup, designing a template for interactive longform articles, and increasing mobile speed and reliability.</p>
+                <p>April 2013 &nbsp;•&nbsp; Present</a></p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+        </div>
+        <div class="sidebar clearfix">
+            <div class="headshot"></div>
+            <div class="container clearfix">
+                <p onClick="window.location='/';" class="hand text text-4">about</p>
+                <p onClick="window.location='/projects';" class="hand text text-5">publications</p>
+                <p onClick="window.location='/resume';" class="hand text text-6">resume</p>
+                <p onClick="window.location='/blog';" class="hand text text-7">blog</p>
+            </div>
+            <div class="socialbuttons clearfix">
+                <div onClick="window.location='http://facebook.com/reetika.sachdeva.9';" class="hand element element-2"></div>
+                <div onClick="javascript:window.location='mailto:sachdeva2012@gmail.com?subject=Hi!';" class="hand element element-3"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script>
+$('#responsive-menu-button').sidr({
+  name: 'sidr-main',
+  source: '.container',
+  side: 'left'
+});
+</script>
+
+<script>
+$(window).touchwipe({
+  wipeLeft: function() {
+    // Close
+    $.sidr('close', 'sidr-main');
+  },
+  wipeRight: function() {
+    // Open
+    $.sidr('open', 'sidr-main');
+  },
+  preventDefaultEvents: false
+});
+</script>
+
+
+
+</html>

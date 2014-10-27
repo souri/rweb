@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Photos - Brian Jacobel</title>
+    <meta name="description" content="Photo portfolio built using the Flickr API and several JQuery plugins."/>
+    <meta name="keywords" content="Brian, Jacobel, Bowdoin, Brian Jacobel, bjacobel"/>
+    <meta name="author" content="Brian Jacobel"/>
+    <meta name="revised" content="January 2013"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta property="og:image" content="http://bjacobel.com/images/preview.jpg"/>
+    <meta name="google-site-verification" content="CR5WZO1Ek9ST1t8hNJyZkNVn3brfm0dP2bdewmGX5Q8" />
+    <link rel="stylesheet" href="css/my.css" media="screen"/>
+    <link rel="stylesheet" href="css/lightbox.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png"/>
+    <link rel="apple-touch-icon" href="images/favicon.png"/>
+    <link rel="image_src" href="images/preview.jpg"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="js/fallback.js"></script>
+    <script src="js/GoogleAnalytics.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/modernizr.custom.81645.js"></script>
+    <script src="js/jquery.masonry.min.js"></script>
+    <script src="js/jquery.lazyload.min.js"></script>
+    <script src="js/jquery.transit.js"></script>
+    <script src="js/my.js"></script>
+    <script src="http://use.edgefonts.net/open-sans.js"></script>
+    <script src="https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&user_id=28268415@N08&api_key=269530467e71aee6baa566a8c7a104b8&per_page=500&extras=url_l&format=json"></script>
+  </head>
+  <body class="unhighlightable">
+    <div class="wrapper">
+      <!--images will be inserted here-->
+    </div>
+    <div id="aboutwrapper">
+      <div id="about">
+	<p id="shortabout">about</p>
+	<p id="longabout">This page grabs my most recent photos from Flickr using their RESTful API, then displays them using <a class="citelink" href="http://lokeshdhakar.com/projects/lightbox2/">Lightbox2</a>, <a class="citelink" href="http://www.appelsiini.net/projects/lazyload">Lazy Load</a>, <a class="citelink" href="http://ricostacruz.com/jquery.transit/">Transit</a>, <a class="citelink" href="http://masonry.desandro.com/">Masonry</a> and <a class="citelink" href="http://modernizr.com/">Modernizr</a>. Feel free to use, modify and share. <a href="http://www.bjacobel.com">Brian Jacobel</a>, 2013.</p>
+      </div>
+    </div>
+  </body>
+</html>
+

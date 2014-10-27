@@ -1,0 +1,379 @@
+a {
+    color:rgb(34, 143, 196);
+}
+
+a:visited {
+    color:#2C3E50;
+}
+
+body {
+    background-color:rgb(255, 255, 255);
+    font:300 1.125em/1.38 'Merriweather Sans';
+    color:rgb(0,0,0);
+}
+
+.body-2 p {
+    margin-bottom:1em;
+}
+
+.bodytext {
+    position:absolute;
+    top:50px;
+    left:0;
+    z-index:4;
+    width:100%;
+    padding-right:90px;
+    padding-left:230px;
+}
+
+.bodytext .body {
+    float:left;
+    clear:both;
+    width:100%;
+    min-height:48px;
+    margin-top:16px;
+    font-size:1em;
+    line-height:1.38;
+    color:rgb(0,0,0);
+}
+
+.bodytext .text {
+    clear:both;
+    width:100%;
+    min-height:43px;
+    margin-top:21px;
+    font:italic 1em Lato;
+    color:rgb(80, 80, 80);
+}
+
+.container {
+    float:left;
+    clear:both;
+    width:82.0359281437%;
+    height:210px;
+    margin:15px 0 0 12px;
+    border-bottom:2px solid rgb(34, 143, 196);
+}
+
+.container .text {
+    width:100%;
+    min-height:20px;
+    font:1.222em Lato;
+    text-align:center;
+    color:rgb(0,0,0);
+}
+
+.date {
+    float:left;
+    width:100%;
+    min-height:39px;
+    font:italic 1.111em/1.38 Lato;
+    color:rgb(85, 85, 85);
+}
+
+.element {
+    float:left;
+}
+
+.hand {
+    cursor:pointer;
+    cursor:hand;
+}
+
+.header {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    z-index:21;
+    width:100%;
+    max-width:1200px;
+    height:346px;
+    margin:0 auto;
+    background:url('/images/header2.jpg') rgb(255, 255, 255);
+    background-repeat:no-repeat;
+    background-size:auto auto;
+    background-position:center top;
+}
+
+.headshot {
+    float:left;
+    width:137px;
+    height:137px;
+    margin-left:12px;
+    border-radius:500px;
+    background:url('/images/Untitled3.jpg') rgb(222, 222, 222);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center center;
+}
+
+.headshot2 {
+    float:center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    postion:relative;
+    width:137px;
+    height:137px;
+    border-radius:500px;
+    background:url('/images/Untitled3.jpg') rgb(222, 222, 222);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center center;
+}
+
+.list li {
+    position:relative;
+    margin:40px 20px;
+    min-height:150px;
+}
+
+.list-img {
+    width:100px;
+    height:100px;
+    float:left;
+    display:inline-block;
+    background-size:contain;
+    background-repeat:no-repeat;
+}
+
+.list-text {
+    position:relative;
+    top:0;
+    max-width:700px;
+    float:right;
+    display:inline-block;
+}
+
+.posttitle {
+    float:left;
+    clear:both;
+    width:100%;
+    min-height:61px;
+    font:400 1.667em/1.38 Lato;
+    color:rgb(0,0,0);
+    margin-bottom:15px !important;
+}
+
+.sidebar {
+    position:relative;
+    float:left;
+    z-index:15;
+    width:169px;
+    height:500px;
+    margin:50px 0 0 43px;
+    padding-bottom:50px;
+    border-right:2px solid rgb(34, 143, 196);
+    overflow:hidden;
+}
+
+.sidebarh {
+    position:relative;
+    float:left;
+    z-index:15;
+    width:169px;
+    height:500px;
+    margin:50px 0 0 43px;
+    padding-bottom:50px;
+    border-right:2px solid rgb(34, 143, 196);
+    overflow:hidden;
+}
+
+.socialbuttons {
+    position:absolute;
+    top:380px;
+    left:43px;
+    z-index:8;
+    width:43.113772455%;
+    height:183px;
+}
+
+.socialbuttons .element {
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center center;
+    background-color:rgb(255, 255, 255);
+}
+
+.text {
+    float:left;
+}
+
+.title {
+    position:absolute;
+    top:137px;
+    left:0;
+    right:0;
+    z-index:20;
+    width:326px;
+    height:86px;
+    margin:0 auto;
+}
+
+.title .element {
+    position:relative;
+    clear:both;
+    z-index:18;
+    width:308px;
+    height:3px;
+    margin:-19px 0 0 1.5337423312%;
+    background-color:rgb(34, 143, 196);
+}
+
+.title .text {
+    position:relative;
+    text-shadow:0 3px 5px rgba(0, 0, 0, .5);
+    text-align:center;
+    text-transform:uppercase;
+    color:rgb(255, 255, 255);
+}
+
+.body-1 {
+    position:absolute;
+    top:50px;
+    left:0;
+    right:0;
+    z-index:16;
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+    padding-bottom:50px;
+}
+
+.element-2 {
+    width:50px;
+    height:50px;
+    margin-left:10px;
+    background-image:url('/images/facebook-icon.png');
+}
+
+.element-3 {
+    clear:both;
+    width:50px;
+    height:53px;
+    margin:10px;
+    background-image:url('/images/email.png');
+}
+
+.element-4 {
+    clear:both;
+    width:53px;
+    height:53px;
+    margin:0 0 0 10px;
+    background-image:url('/images/linkedin.svg');
+}
+
+.text-1 {
+    z-index:17;
+    width:326px;
+    min-height:73px;
+    margin:-4px 0 0 -0.9202453988%;
+    font-size:2.222em;
+}
+
+.text-2 {
+    z-index:19;
+    width:312px;
+    min-height:23px;
+    margin-top:-11px;
+    font-size:0.889em;
+    letter-spacing:1px;
+}
+
+.text-4 {
+    margin-top:11px;
+}
+
+.text-5 {
+    clear:both;
+    margin-top:20px;
+}
+
+.text-6 {
+    clear:both;
+    margin-top:21px;
+}
+
+.text-7 {
+    clear:both;
+    margin-top:22px;
+}
+
+@media(max-width: 650px)  {
+
+
+.body .bodytext {
+    top:20px;
+    padding-right:20px;
+    padding-left:20px;
+}
+
+.body .sidebar {
+    position:relative;
+    z-index:15;
+    width:0;
+    height:auto;
+    border-right-width:0;
+    border-right-style:none;
+}
+
+.bodytext .text {
+    margin-top:66px;
+    margin-left:16.1538461538%;
+}
+
+.header {
+    left:0;
+    right:0;
+    height:235px;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+.header .title {
+    top:92px;
+    left:0;
+    right:0;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+.title .element {
+    position:relative;
+    clear:none;
+    z-index:18;
+}
+
+.title .text {
+    position:relative;
+    text-shadow:0 3px 5px rgba(0, 0, 0, .5);
+}
+
+.body-1 {
+    top:235px;
+    left:0;
+    right:0;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+.container .text-5 {
+    margin-top:102px;
+}
+
+.container .text-6 {
+    margin-top:244px;
+}
+
+.container .text-7 {
+    margin-top:438px;
+}
+
+.title .text-1 {
+    z-index:17;
+}
+
+.title .text-2 {
+    z-index:19;
+}

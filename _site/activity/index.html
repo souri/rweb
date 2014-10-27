@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Hi!</title>
+    <link href="http://fonts.googleapis.com/css?family=Merriweather+Sans:300|Lato:300,400" rel="stylesheet" type="text/css">
+    <link href="/images/favicon.ico" type="image/x-icon" rel="icon">
+    <link rel="stylesheet" href="/css/standardize.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/js/sidr/stylesheets/jquery.sidr.light.css">
+    <script src="/js/ga.js"></script>
+    <script src="/js/jquery-min.js"></script>
+    <script src="/js/sidr/jquery.sidr.min.js"></script>
+    <script src="/js/jquery.touchwipe.js"></script>
+</head>
+
+<style>
+#mobile-header {
+  display: none;
+}
+.headshot2 {
+  display: none;
+}
+img {
+  width: 20%;
+  height: auto;
+  margin-left: 8px;
+  margin-top: 8px;
+}
+
+.sidr-class-hand {
+  cursor: pointer;
+  cursor: hand;
+}
+
+@media only screen and (max-width: 650px){
+  #mobile-header {
+    display: block;
+  }
+  .headshot2 {
+    display: block;
+  }
+}
+</style>
+
+<body class="body index clearfix">
+  <div id="mobile-header" class="clearfix hand text">
+    <a id="responsive-menu-button">
+       <img class="menu" href="#sidr-main" src="/images/menu.png" alt="Menu">
+    </a>
+  </div>
+  <div class="headshot2"></div>
+    <div class="body body-1 clearfix">
+        <div class="bodytext clearfix">
+            <script type="text/javascript" src="/js/moment.min.js"></script>
+
+<div class="body body-2">
+    <p class="posttitle">Here's what I'm working on, right now:</p>
+    <div class="events">
+    </div>
+    <p><i>(data via the <a href="https://developer.github.com/v3/activity/events/">github public api</a>)</i>
+</div>
+
+<script type="text/javascript">
+    $.ajax({
+        url: "https://api.github.com/users/bjacobel/events/public",
+        error: function (jqXHR, textStatus, errorThrown ){
+            console.error(textStatus);
+        },
+    }).done(function(data){
+        console.log(data);
+        data.forEach(function(element, index, array){
+            if(element.type == "PushEvent"){
+                mkcommits(
+                    element.created_at,
+                    element.payload.commits.length,
+                    element.payload.ref.slice(11),
+                    element.repo.name,
+                    element.payload.commits
+                );
+            }
+
+        });
+    });
+
+    var mkcommits = function (timestamp, num, ref, reponame, commits){
+        commit_s = (num == 1 ? "commit" : "commits");
+        repolink = "<a href='https://github.com/"+reponame+"'>"+reponame+"</a>.";
+        branchlink = "<a href='https://github.com/"+reponame+"/tree/"+ref+"'>"+ref+"</a>";
+        timestamp = "<p class='timestamp'>"+moment(timestamp).fromNow()+"</p>"
+        summary = timestamp+"<p>Pushed "+num+" "+commit_s+" to "+branchlink+" at "+repolink+"</p>";
+
+        commits.forEach(function(element, index, array){
+            summary += "<p class='code'><a href='https://github.com/"+reponame+"/commit/"+element.sha+"'>"+element.sha.slice(0,8)+"</a>: "+element.message+"</p>";
+        });
+
+        $(".events").append(summary);
+    };
+</script>
+
+<style>
+    .code {
+        font-family:"Courier New", Courier, monospace;
+        font-size:11pt;
+        margin-left:10px;
+    }
+    .timestamp {
+        font-size:9pt;
+        color:#7f7f7f;
+        margin-bottom:2px;
+    }
+</style>
+        </div>
+        <div class="sidebar clearfix">
+            <div class="headshot"></div>
+            <div class="container clearfix">
+                <p onClick="window.location='/';" class="hand text text-4">about</p>
+                <p onClick="window.location='/projects';" class="hand text text-5">publications</p>
+                <p onClick="window.location='/resume';" class="hand text text-6">resume</p>
+                <p onClick="window.location='/blog';" class="hand text text-7">blog</p>
+            </div>
+            <div class="socialbuttons clearfix">
+                <div onClick="window.location='http://facebook.com/reetika.sachdeva.9';" class="hand element element-2"></div>
+                <div onClick="javascript:window.location='mailto:sachdeva2012@gmail.com?subject=Hi!';" class="hand element element-3"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script>
+$('#responsive-menu-button').sidr({
+  name: 'sidr-main',
+  source: '.container',
+});
+</script>
+
+<!-- // <script>
+// $(window).touchwipe({
+//   wipeLeft: function() {
+//     // Close
+//     $.sidr('close', 'sidr-main');
+//   },
+//   wipeRight: function() {
+//     // Open
+//     $.sidr('open', 'sidr-main');
+//   },
+//   preventDefaultEvents: false
+// });
+// </script> -->
+</html>

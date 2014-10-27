@@ -1,0 +1,12 @@
+name: Reetika Sachdeva
+markdown: redcarpet
+timezone: America/New_York
+highlighter: pygments
+permalink: pretty
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      author: "Reetika"

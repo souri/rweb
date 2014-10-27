@@ -1,0 +1,139 @@
+@media all {
+    body {
+       margin: 0;
+       padding: 0;
+       width:100%;
+       height:100%;
+   }
+   .wrapper {
+       margin:0;
+       padding:0;
+       height:100%;
+   }
+   img.pic {
+       width:100%;
+       border: .1em solid rgba(175,175,175,0.7);
+       box-shadow: 0em 0em .5em .15em rgba(100,100,100,0.7);
+       
+   }
+   .unhighlightable {
+       -webkit-touch-callout: none;
+       -webkit-user-select: none;
+       -khtml-user-select: none;
+       -moz-user-select: none;
+       -ms-user-select: none;
+       user-select: none;
+   }
+   .picdiv {
+       width: 22.5%;
+       padding:1.25%;
+       float:left;
+       overflow:hidden;
+   }
+   /*.picdiv:hover {
+       width:23.5%;
+       padding:.75%;
+   }*/
+   #loading{
+       position:absolute;
+       top:38%;
+       left:45%;
+       font-family: open-sans, sans-serif;
+       font-size:1.5em;
+       color:rgba(125,125,125,0.7);
+   }
+   #aboutwrapper {
+       padding:0;
+       margin:0;
+       position:relative;
+       left:23%;
+       bottom:0%;
+       height:7.5em;
+       width:55%;
+       overflow:hidden;
+   }
+   div#about {
+       background-image:url("../images/gray.png");
+       position:absolute;
+       bottom:-1.5em;
+       left:32.5%;
+       width:30%;
+       height:2.2em;
+       margin:1em;
+       border-top:1px solid rgba(175,175,175,0.8);
+       border-left:1px solid rgba(175,175,175,0.8);
+       border-right:1px solid rgba(175,175,175,0.8);
+       border-radius:.5em;
+       box-shadow:0em 0em 1em .15em rgba(100,100,100,0.8);
+       -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+       -ms-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+       transition: all 0.5s ease;
+   }
+   #about.expandabout {
+       left:0;
+       width:95%;
+       height:7em;
+   }
+   p#shortabout {
+       font-family: open-sans, sans-serif;
+       color:white;
+       text-shadow: rgba(100,100,100,0.8) .1em .1em .3em, rgba(100,100,100,0.8) -.1em .1em .3em, rgba(100,100,100,0.8) .1em -.1em .3em, rgba(100,100,100,0.8) -.1em -.1em .3em;
+       font-size:1em;
+       left:37%;
+       top:10%;
+       margin:0;
+       position:absolute;
+   }
+   p#longabout {
+       margin-left:auto;
+       margin-right:auto;
+       margin-top:3%;
+       width:80%;
+       height:85%;
+       visibility:hidden;
+       font-family: open-sans, sans-serif;
+       font-size:.85em;
+       align:justify;
+       color:black;
+   }
+   a.citelink {
+       color: rgb(85,100,255);
+       text-decoration:none;
+   }
+   a.citelink:hover {
+       color: #6600FF;
+   }
+   a.citelink:visited {
+       color: rgb(90,0,220);
+   }
+
+   /**** Masonry Transitions ****/
+
+   .masonry,
+   .masonry .masonry-brick {
+       -webkit-transition-duration: 0.35s;
+       -moz-transition-duration: 0.35s;
+       -ms-transition-duration: 0.35s;
+       -o-transition-duration: 0.35s;
+       transition-duration: 0.35s;
+   }
+
+   .masonry {
+       -webkit-transition-property: height, width, padding;
+       -moz-transition-property: height, width, padding;
+       -ms-transition-property: height, width, padding;
+       -o-transition-property: height, width, padding;
+       transition-property: height, width, padding;
+   }
+
+   .masonry .masonry-brick {
+       -webkit-transition-property: left, right, top, width, padding;
+       -moz-transition-property: left, right, top, width, padding;
+       -ms-transition-property: left, right, top, width, padding;
+       -o-transition-property: left, right, top, width, padding;
+       transition-property: left, right, top, width, padding;
+   }
+
+}

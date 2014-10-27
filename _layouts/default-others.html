@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Hi!</title>
+    <link href="http://fonts.googleapis.com/css?family=Merriweather+Sans:300|Lato:300,400" rel="stylesheet" type="text/css">
+    <link href="/images/favicon.ico" type="image/x-icon" rel="icon">
+    <link rel="stylesheet" href="/css/standardize.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/js/sidr/stylesheets/jquery.sidr.light.css">
+    <script src="/js/ga.js"></script>
+    <script src="/js/jquery-min.js"></script>
+    <script src="/js/sidr/jquery.sidr.min.js"></script>
+    <script src="/js/jquery.touchwipe.js"></script>
+</head>
+
+<style>
+#mobile-header {
+  display: none;
+}
+.headshot2 {
+  display: none;
+}
+img {
+  width: 20%;
+  height: auto;
+  margin-left: 8px;
+  margin-top: 8px;
+}
+.sidr-class-hand {
+  cursor: pointer;
+  cursor: hand;
+}
+
+@media only screen and (max-width: 650px){
+  #mobile-header {
+    display: block;
+  }
+  .headshot2 {
+    display: block;
+  }
+  .body-1 {
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    top: 100px;
+  }
+}
+</style>
+
+<body class="body index clearfix">
+  <div id="mobile-header" class="clearfix hand text">
+    <a id="responsive-menu-button" href="#sidr-main">
+       <img class="menu" src="/images/menu.png" alt="Menu">
+    </a>
+  </div>
+    <div class="body body-1 clearfix">
+        <div class="bodytext clearfix">
+            {{ content }}
+        </div>
+        <div class="sidebar clearfix">
+            <div class="headshot"></div>
+            <div class="container clearfix">
+                <p onClick="window.location='/';" class="hand text text-4">about</p>
+                <p onClick="window.location='/projects';" class="hand text text-5">publications</p>
+                <p onClick="window.location='/resume';" class="hand text text-6">resume</p>
+                <p onClick="window.location='/blog';" class="hand text text-7">blog</p>
+            </div>
+            <div class="socialbuttons clearfix">
+                <div onClick="window.location='http://facebook.com/reetika.sachdeva.9';" class="hand element element-2"></div>
+                <div onClick="javascript:window.location='mailto:sachdeva2012@gmail.com?subject=Hi!';" class="hand element element-3"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script>
+$('#responsive-menu-button').sidr({
+  name: 'sidr-main',
+  source: '.container',
+  side: 'left'
+});
+</script>
+
+<script>
+$(window).touchwipe({
+  wipeLeft: function() {
+    // Close
+    $.sidr('close', 'sidr-main');
+  },
+  wipeRight: function() {
+    // Open
+    $.sidr('open', 'sidr-main');
+  },
+  preventDefaultEvents: false
+});
+</script>
+
+
+
+</html>

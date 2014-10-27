@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Hi!</title>
+    <link href="http://fonts.googleapis.com/css?family=Merriweather+Sans:300|Lato:300,400" rel="stylesheet" type="text/css">
+    <link href="/images/favicon.ico" type="image/x-icon" rel="icon">
+    <link rel="stylesheet" href="/css/standardize.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/js/sidr/stylesheets/jquery.sidr.light.css">
+    <script src="/js/ga.js"></script>
+    <script src="/js/jquery-min.js"></script>
+    <script src="/js/sidr/jquery.sidr.min.js"></script>
+    <script src="/js/jquery.touchwipe.js"></script>
+</head>
+
+<style>
+#mobile-header {
+  display: none;
+}
+.headshot2 {
+  display: none;
+}
+img {
+  width: 20%;
+  height: auto;
+  margin-left: 8px;
+  margin-top: 8px;
+}
+.sidr-class-hand {
+  cursor: pointer;
+  cursor: hand;
+}
+
+@media only screen and (max-width: 650px){
+  #mobile-header {
+    display: block;
+  }
+  .headshot2 {
+    display: block;
+  }
+  .body-1 {
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    top: 100px;
+  }
+}
+</style>
+
+<body class="body index clearfix">
+  <div id="mobile-header" class="clearfix hand text">
+    <a id="responsive-menu-button" href="#sidr-main">
+       <img class="menu" src="/images/menu.png" alt="Menu">
+    </a>
+  </div>
+    <div class="body body-1 clearfix">
+        <div class="bodytext clearfix">
+            <p class="date meta">28 Apr 2014</p>
+<p class="posttitle">Site Redesign</p>
+<div class="body body-2">
+    <p>I&#39;ve just launched a redesign of the site!</p>
+
+<p>This is the fourth time I&#39;ve changed the design of my personal page. The first site was the first time I&#39;d ever written HTML or CSS, way back in my sophomore year. I didn&#39;t even know about Git back then, so (fortunately?) no version of it still exists. Version 2.0 was when I jumped to <a href="http://pages.github.com">GitHub Pages</a> and started learning Javascript. I <a href="https://github.com/bjacobel/bjacobel.github.io/tree/d6691a34db079228caa73c5a19ccd6fe2493487e">constructed some bizarre mess</a> of jQuery callbacks and local storage to make panels expand and retract, then covered the whole thing in a smear of Apple&#39;s then-ubiquitous linen pattern. Nice. Version 3 kept the same basic structure but expunged a lot of the <a href="https://github.com/bjacobel/bjacobel.github.io/commit/d26a3b89144c23e093a287606bee64a1cc05b93a">awful textures and shadows</a>, plus cleaned up the Javascript considerably. </p>
+
+<p>Version 4 integrates blogging into the site for the first time. It&#39;s done via <a href="http://jekyllrb.com">Jekyll</a>, which I picked even though I&#39;m a Python guy because of it&#39;s very nice integration with GitHub Pages. Jekyll lets me write posts in Markdown, which (along with <a href="http://mouapp.com">Mou</a>) has become my go-to for note-taking and drafting. The design of the site was done with <a href="http://macaw.co">Macaw</a>, which I highly recommend. I&#39;ll be tuning the site over the next couple of weeks and also trying to get into the blogging habit when I have some cool code to share.</p>
+
+</div>
+<p onClick="window.location='/';" class="hand text">⇽&nbsp;Back to posts</p>
+
+        </div>
+        <div class="sidebar clearfix">
+            <div class="headshot"></div>
+            <div class="container clearfix">
+                <p onClick="window.location='/';" class="hand text text-4">about</p>
+                <p onClick="window.location='/projects';" class="hand text text-5">publications</p>
+                <p onClick="window.location='/resume';" class="hand text text-6">resume</p>
+                <p onClick="window.location='/blog';" class="hand text text-7">blog</p>
+            </div>
+            <div class="socialbuttons clearfix">
+                <div onClick="window.location='http://facebook.com/reetika.sachdeva.9';" class="hand element element-2"></div>
+                <div onClick="javascript:window.location='mailto:sachdeva2012@gmail.com?subject=Hi!';" class="hand element element-3"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script>
+$('#responsive-menu-button').sidr({
+  name: 'sidr-main',
+  source: '.container',
+  side: 'left'
+});
+</script>
+
+<script>
+$(window).touchwipe({
+  wipeLeft: function() {
+    // Close
+    $.sidr('close', 'sidr-main');
+  },
+  wipeRight: function() {
+    // Open
+    $.sidr('open', 'sidr-main');
+  },
+  preventDefaultEvents: false
+});
+</script>
+
+
+
+</html>
