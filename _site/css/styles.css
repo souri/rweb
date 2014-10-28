@@ -126,7 +126,8 @@ body {
 .list li {
     position:relative;
     margin:40px 20px;
-    min-height:150px;
+    min-height:170px;
+    font-size: 95%;
 }
 
 .list-img {
