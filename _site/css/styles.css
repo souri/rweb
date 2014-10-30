@@ -22,8 +22,8 @@ body {
     left:0;
     z-index:4;
     width:100%;
-    padding-right:90px;
-    padding-left:230px;
+    padding-right:150px;
+    padding-left:300px;
 }
 
 .bodytext .body {
@@ -49,10 +49,10 @@ body {
 .container {
     float:left;
     clear:both;
-    width:82.0359281437%;
-    height:210px;
-    margin:15px 0 0 12px;
-    border-bottom:2px solid rgb(34, 143, 196);
+    width:70%;
+    height:190px;
+    margin:15px 0 0 25px;
+    border-bottom:1.8px solid rgb(34, 143, 196);
 }
 
 .container .text {
@@ -98,9 +98,9 @@ body {
 
 .headshot {
     float:left;
-    width:137px;
-    height:137px;
-    margin-left:12px;
+    width:120px;
+    height:120px;
+    margin-left:25px;
     border-radius:500px;
     background:url('/images/Untitled3.jpg') rgb(222, 222, 222);
     background-repeat:no-repeat;
@@ -142,7 +142,7 @@ body {
 .list-text {
     position:relative;
     top:0;
-    max-width:700px;
+    max-width:590px;
     float:right;
     display:inline-block;
 }
@@ -162,10 +162,10 @@ body {
     float:left;
     z-index:15;
     width:169px;
-    height:500px;
-    margin:50px 0 0 43px;
+    height:460px;
+    margin:50px 0 0 110px;
     padding-bottom:50px;
-    border-right:2px solid rgb(34, 143, 196);
+    border-right:1.8px solid rgb(34, 143, 196);
     overflow:hidden;
 }
 
@@ -183,8 +183,8 @@ body {
 
 .socialbuttons {
     position:absolute;
-    top:380px;
-    left:43px;
+    top:350px;
+    left:50px;
     z-index:8;
     width:43.113772455%;
     height:183px;
@@ -244,7 +244,7 @@ body {
 
 .element-2 {
     width:50px;
-    height:50px;
+    height:40px;
     margin-left:10px;
     background-image:url('/images/facebook-icon.png');
 }
@@ -252,7 +252,7 @@ body {
 .element-3 {
     clear:both;
     width:50px;
-    height:53px;
+    height:43px;
     margin:10px;
     background-image:url('/images/email.png');
 }

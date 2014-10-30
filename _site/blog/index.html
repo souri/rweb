@@ -15,6 +15,7 @@
     <script src="/js/jquery-min.js"></script>
     <script src="/js/sidr/jquery.sidr.min.js"></script>
     <script src="/js/jquery.touchwipe.js"></script>
+    <script src="/js/nanobar.min.js"></script>
 </head>
 
 <style>
@@ -119,6 +120,16 @@ $(window).touchwipe({
 
   ga('create', 'UA-56160501-1', 'auto');
   ga('send', 'pageview');
-
 </script>
+
+<script>
+var options = {
+  bg: '#228FC4',
+  target: document.getElementById('myDivId'),
+  id: 'mynano'
+};
+var nanobar = new Nanobar( options );
+nanobar.go(100);
+</script>
+
 </html>
