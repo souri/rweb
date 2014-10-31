@@ -47,12 +47,49 @@ img {
     display: block;
   }
 }
+.sidebar-toggle:before {
+    border-bottom-width: 0.15rem;
+    border-top-width: 0.45rem;
+    padding-bottom: 0.15rem;
+}
+.sidebar-toggle:before {
+    border-bottom: 0.125rem solid;
+    border-top: 0.375rem double;
+    box-sizing: border-box;
+    content: "";
+    display: block;
+    padding-bottom: 0.125rem;
+    width: 100%;
+}
+
+.sidebar-toggle:active, #sidebar-checkbox:checked ~ .sidebar-toggle {
+    background-color: #505050;
+    color: #fff;
+}
+
+.sidebar-toggle-active {
+    background-color: #505050;
+    color: #fff;
+}
+
+.sidebar-toggle {
+    background-color: #fff;
+    border-radius: 4px;
+    color: #505050;
+    cursor: pointer;
+    display: block;
+    left: 1rem;
+    padding: 0.5rem 0.65rem;
+    position: absolute;
+    top: 1rem;
+    width: 2.4rem;
+}
 </style>
 
 <body class="body index clearfix">
   <div id="mobile-header" class="clearfix hand text">
     <a id="responsive-menu-button">
-       <img class="menu" href="#sidr-main" src="/images/menu.png" alt="Menu">
+      <label id="togglemenubutton" class="sidebar-toggle" href="#sidr-main"></label>
     </a>
   </div>
   <div class="headshot2"></div>
@@ -87,6 +124,15 @@ img {
 $('#responsive-menu-button').sidr({
   name: 'sidr-main',
   source: '.container',
+  onOpen: function(){
+    console.log("Opened");
+    jQuery("togglemenubutton").removeClass("sidebar-toggle");
+    jQuery("togglemenubutton").addClass("sidebar-toggle-active");
+  },
+  onClose: function(){
+    console.log("Opened");
+    jQuery("togglemenubutton").removeClass("sidebar-toggle-active");
+  }
 });
 </script>
 
