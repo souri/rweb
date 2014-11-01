@@ -130,7 +130,16 @@ img {
 $('#responsive-menu-button').sidr({
   name: 'sidr-main',
   source: '.container',
-  side: 'left'
+  onOpen: function(){
+    console.log("Opened");
+    document.getElementById("togglemenubutton").style.backgroundColor = "#505050";
+    document.getElementById("togglemenubutton").style.color = "#fff";
+  },
+  onClose: function(){
+    console.log("Closed");
+    document.getElementById("togglemenubutton").style.backgroundColor = "#fff";
+    document.getElementById("togglemenubutton").style.color = "#505050";
+  }
 });
 </script>
 

@@ -178,12 +178,13 @@ $('#responsive-menu-button').sidr({
   source: '.container',
   onOpen: function(){
     console.log("Opened");
-    jQuery("togglemenubutton").removeClass("sidebar-toggle");
-    jQuery("togglemenubutton").addClass("sidebar-toggle-active");
+    document.getElementById("togglemenubutton").style.backgroundColor = "#505050";
+    document.getElementById("togglemenubutton").style.color = "#fff";
   },
   onClose: function(){
-    console.log("Opened");
-    jQuery("togglemenubutton").removeClass("sidebar-toggle-active");
+    console.log("Closed");
+    document.getElementById("togglemenubutton").style.backgroundColor = "#fff";
+    document.getElementById("togglemenubutton").style.color = "#505050";
   }
 });
 </script>
