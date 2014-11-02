@@ -3,6 +3,8 @@ markdown: redcarpet
 timezone: America/New_York
 highlighter: pygments
 permalink: pretty
+gems:
+  - jekyll-sitemap
 
 defaults:
   -
