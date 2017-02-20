@@ -378,3 +378,7 @@ body {
 .title .text-2 {
     z-index:19;
 }
+
+.articlebody {
+    color: #666;
+}
